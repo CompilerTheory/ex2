@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8f39c5f-376c-4b59-8e43-3e0de924f864" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntaxAnalyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SyntaxAnalyzer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/LexicalAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/LexicalAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/SyntaxAnalyzer$Production.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/SyntaxAnalyzer$Production.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/SyntaxAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/SyntaxAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/input6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/output1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/output2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/output3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/output4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/output5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/output6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/test3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/test4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/test5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SyntaxAnalyzer/file/test6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SyntaxAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SyntaxAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/file/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/file/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/input3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/input4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/input5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/input6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/output1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/output2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/output3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/output4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/output5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/output6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/test3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/test4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/test5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/test6.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rKqi6lReSxfAylcgcTmbULSk5C" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546935156477" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="C:\Users\炸弹人\IdeaProjects\SyntaxAnalyzer\src\file" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\炸弹人\IdeaProjects\SyntaxAnalyzer\src\file" />
+      <recent name="C:\Users\炸弹人\IdeaProjects\SyntaxAnalyzer\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SyntaxAnalyzer">
+    <configuration name="LexicalAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LexicalAnalyzer" />
+      <module name="SyntaxAnalyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SyntaxAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SyntaxAnalyzer" />
+      <module name="SyntaxAnalyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LexicalAnalyzer" />
+      <item itemvalue="Application.SyntaxAnalyzer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SyntaxAnalyzer" />
+        <item itemvalue="Application.LexicalAnalyzer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8f39c5f-376c-4b59-8e43-3e0de924f864" name="Default Changelist" comment="" />
+      <created>1543996158329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543996158329</updated>
+      <workItem from="1543996161323" duration="18253000" />
+      <workItem from="1544080836274" duration="12547000" />
+      <workItem from="1544174654584" duration="922000" />
+      <workItem from="1546923713947" duration="4049000" />
+      <workItem from="1547032912098" duration="367000" />
+      <workItem from="1547778150270" duration="17000" />
+      <workItem from="1618735254608" duration="8119000" />
+      <workItem from="1618806493495" duration="871000" />
+      <workItem from="1618812137386" duration="3180000" />
+      <workItem from="1618815436303" duration="6093000" />
+      <workItem from="1619343986152" duration="296000" />
+      <workItem from="1620632220288" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
