@@ -33,6 +33,22 @@ public class SyntaxAnalyzer {
         reader = wordAnalysis.getWordCodeList();
 
         reader.add(map_s2i.get("$")); // 在reader末尾加上$
+
+        //记录标号的产生时机
+        int biaohao=0;
+        int target=0;
+        int tTarget=0;
+        int isWhile = 0;
+        String temp = "";
+        StringBuffer siyuanshi = new StringBuffer();
+
+        ArrayList<String> real = new ArrayList<>();
+        real = wordAnalysis.getWordList();
+        //System.out.println(real);
+        int realPlace = 0;
+        HashMap<String,String> id2Tn =new HashMap<>();
+
+
         while (stackTop >= 0) {
             System.out.printf("%-6s", "第" + ++index + "步：");
             System.out.printf("%-10s", "当前栈：");
@@ -58,9 +74,126 @@ public class SyntaxAnalyzer {
 
             if (match(stackTop, readerTop)) {
                 stackTop--;
+                realPlace++;
                 System.out.print("\n");
             } else {
+                if(biaohao==1&&map_i2s.get(reader.get(readerTop)).equals("}")){
+
+                    if(isWhile==1){
+                        temp = "\n(goto L"+target+")";
+                        System.out.println(temp);
+                        siyuanshi.append(temp);
+                        isWhile =0 ;
+                        target++;
+                    }
+                    temp = "\nL"+target+":";
+                    System.out.println(temp);
+                    siyuanshi.append(temp);
+                    target++;
+                    biaohao=0;
+                }
+
                 int i = ll1_table(stackTop, readerTop);
+
+                if(i == 13 || i == 14) {
+                    biaohao = 1;
+
+                    //提取if中的式子
+//                    System.out.println("\n"+map_i2s.get(reader.get(2))+"  !!"+readerTop);
+                    int readerCopyTop = 2;
+                    ArrayList<Integer> houzhui =new ArrayList<>();
+                    ArrayList<String> realZhi =new ArrayList<>();
+                    int zuokuo = 1;
+                    while(zuokuo!=0)
+                    {
+
+                        String str= map_i2s.get(reader.get(readerCopyTop));
+                        if(str.equals(")")){
+                            zuokuo--;
+                            if(zuokuo==0)
+                            {
+                                break;
+                            }
+                        }
+                        if(map_i2s.get(reader.get(readerCopyTop)).equals("id")){
+                            String realTn = id2Tn.get(real.get(realPlace+readerCopyTop));
+                            realZhi.add(realTn);
+                        } else {
+                            realZhi.add(real.get(realPlace+readerCopyTop));
+                        }
+
+                        System.out.println("\n!!!!"+realZhi);
+                        if(str.equals("(")){
+                            zuokuo++;
+                        }
+                        houzhui.add(reader.get(readerCopyTop));
+                        //System.out.println(houzhui);
+                        readerCopyTop++;
+                    }
+
+//                    System.out.println("\n"+houzhui);
+
+                    //接收四元式并构造if四元式
+                    String twoonethree = "";
+                    if(i == 13){
+                        temp = "\n(ifFail  "+twoonethree+"  goto      L"+target+")";
+                        System.out.println(temp);
+                        siyuanshi.append(temp);
+                    }
+
+                    if(i == 14){
+                        isWhile = 1;
+                        temp = "\nL"+target+":";
+                        System.out.println(temp);
+                        siyuanshi.append(temp);
+                        //后缀式
+                        temp = "\n(whileFail  "+twoonethree+"  goto      L"+(target+1)+")";
+                        System.out.println(temp);
+                        siyuanshi.append(temp);
+                    }
+
+                }
+                //声明待修改
+                if(i == 6) {
+                    String realType=real.get(realPlace);
+                    String realId=real.get(realPlace + 1);
+                    String realTn="t"+tTarget;
+                    temp = "\n("+ realType +"  "+ realId +"  _    t"+tTarget+")";
+                    System.out.println(temp);
+                    siyuanshi.append(temp);
+                    tTarget++;
+                    id2Tn.put(realId,realTn);
+                    //System.out.println(realType + "!" + realTn);
+                }
+                //赋值(有问题)
+                if(i == 17) {
+                    int end = readerTop;
+                    ArrayList<Integer> fuzhi =new ArrayList<>();
+                    ArrayList<String> realZhi =new ArrayList<>();
+                    while(!(map_i2s.get(reader.get(end)).equals(";")))
+                    {
+
+                        if(map_i2s.get(reader.get(end)).equals("id")) {
+                            String realTn = id2Tn.get(real.get(realPlace+end));
+                            realZhi.add(realTn);
+
+                        } else{
+                            realZhi.add(real.get(realPlace+end));
+                        }
+
+                        fuzhi.add(reader.get(end));
+                        end++;
+                    }
+                    System.out.println("\n"+fuzhi);
+                    System.out.println("\n"+realZhi);
+                    temp = "\n(" + map_i2s.get(reader.get(readerTop + 1)) + "  id  num/id    t"+tTarget+")";
+                    System.out.println(temp);
+                    siyuanshi.append(temp);
+
+                    tTarget++;
+                }
+
+
                 if (i == -1) {
                     System.out.println("\nError: 该程序在当前栈顶为 " + stack.get(stackTop) + " 处，与待读队列顶处的元素 " + map_i2s.get(reader.get(readerTop)) + " 匹配时发生错误。");
                     return;
@@ -71,7 +204,9 @@ public class SyntaxAnalyzer {
             }
         }
         if (stackTop == -1) {
+
             System.out.println("语法分析成功");
+            System.out.println(siyuanshi);
         }
     }
 
