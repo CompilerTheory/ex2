@@ -239,6 +239,8 @@ public class SyntaxAnalyzer {
         } else if ("decls".equals(stack.get(stackTop))) {
             if ("{".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 2;
+            } else if ("}".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 2;
             } else if ("basic".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 2;
             } else if ("if".equals(map_i2s.get(reader.get(readerTop)))) {
@@ -256,6 +258,8 @@ public class SyntaxAnalyzer {
             }
         } else if ("decls'".equals(stack.get(stackTop))) {
             if ("{".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 3;
+            } else if ("}".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 3;
             } else if ("basic".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 4;
@@ -349,6 +353,8 @@ public class SyntaxAnalyzer {
         } else if ("stmt'".equals(stack.get(stackTop))) {
             if ("{".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 18;
+            } else if ("}".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 18;
             } else if ("if".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 18;
             } else if ("while".equals(map_i2s.get(reader.get(readerTop)))) {
@@ -367,7 +373,6 @@ public class SyntaxAnalyzer {
         } else if ("loc".equals(stack.get(stackTop))) {
             if ("id".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 55;
-
             } else {
                 return -1;
             }
@@ -380,7 +385,29 @@ public class SyntaxAnalyzer {
                 return 21;
             } else if ("=".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 21;
+            } else if ("+".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if ("-".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if ("!=".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if ("==".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
             } else if ("<".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if ("<=".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if (">".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if (">=".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 21;
+            } else if (";".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 21;
             } else {
                 return -1;
@@ -402,10 +429,6 @@ public class SyntaxAnalyzer {
                 return 22;
             } else if ("false".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 22;
-            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
-                return 23;
-            } else if (";".equals(map_i2s.get(reader.get(readerTop)))) {
-                return 23;
             } else {
                 return -1;
             }
@@ -440,12 +463,12 @@ public class SyntaxAnalyzer {
                 return -1;
             }
         } else if ("join'".equals(stack.get(stackTop))) {
-            if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
+            if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 26;
+            } else if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 26;
             } else if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 27;
-            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
-                return 26;
             } else if (";".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 26;
             } else {
@@ -472,14 +495,16 @@ public class SyntaxAnalyzer {
                 return -1;
             }
         } else if ("equality'".equals(stack.get(stackTop))) {
-            if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
+            if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 30;
+            } else if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 29;
+            } else if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 29;
             } else if ("!=".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 30;
             } else if ("==".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 31;
-            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
-                return 29;
             } else if (";".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 29;
             } else {
@@ -506,7 +531,13 @@ public class SyntaxAnalyzer {
                 return -1;
             }
         } else if ("rel'".equals(stack.get(stackTop))) {
-            if ("!=".equals(map_i2s.get(reader.get(readerTop)))) {
+            if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 33;
+            } else if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 33;
+            } else if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 33;
+            } else if ("!=".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 33;
             } else if ("==".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 33;
@@ -548,6 +579,12 @@ public class SyntaxAnalyzer {
                 return 40;
             } else if ("-".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 41;
+            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 48;
+            } else if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 48;
+            } else if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 48;
             } else if ("!=".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 48;
             } else if ("==".equals(map_i2s.get(reader.get(readerTop)))) {
@@ -559,8 +596,6 @@ public class SyntaxAnalyzer {
             } else if (">".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 48;
             } else if (">=".equals(map_i2s.get(reader.get(readerTop)))) {
-                return 48;
-            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 48;
             } else if (";".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 48;
@@ -596,9 +631,23 @@ public class SyntaxAnalyzer {
                 return 44;
             } else if ("-".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 44;
+            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
+            } else if ("||".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
+            } else if ("&&".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
+            } else if ("!=".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
+            } else if ("==".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
             } else if ("<".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 44;
-            } else if (")".equals(map_i2s.get(reader.get(readerTop)))) {
+            } else if ("<=".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
+            } else if (">".equals(map_i2s.get(reader.get(readerTop)))) {
+                return 44;
+            } else if (">=".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 44;
             } else if (";".equals(map_i2s.get(reader.get(readerTop)))) {
                 return 44;
@@ -682,7 +731,7 @@ public class SyntaxAnalyzer {
                 new String[]{"decl", "decls'"},
                 "decls' --> decl decls'");
         productions[5] = new Production("decl",
-                new String[]{"type", String.valueOf(map_s2i.get("id")), String.valueOf(map_s2i.get(";"))},
+                new String[]{String.valueOf(map_s2i.get("type")), String.valueOf(map_s2i.get("id")), String.valueOf(map_s2i.get(";"))},
                 "decl --> type id;");
         productions[6] = new Production("type",
                 new String[]{String.valueOf(map_s2i.get("basic")), "type'"},
@@ -817,7 +866,7 @@ public class SyntaxAnalyzer {
                 new String[]{"loc"},
                 "factor --> loc");
         productions[50] = new Production("factor",
-                new String[]{String.valueOf(map_s2i.get("(")), "bool" ,String.valueOf(map_s2i.get(")"))},
+                new String[]{String.valueOf(map_s2i.get("(")), "bool" , String.valueOf(map_s2i.get(")"))},
                 "factor --> (bool) ");
         productions[51] = new Production("factor",
                 new String[]{String.valueOf(map_s2i.get("num"))},
@@ -826,14 +875,14 @@ public class SyntaxAnalyzer {
                 new String[]{"real"},
                 "factor --> real");
         productions[53] = new Production("factor",
-                new String[]{"true"},
+                new String[]{String.valueOf(map_s2i.get("true")},
                 "factor --> true ");
         productions[54] = new Production("factor",
-                new String[]{"false"},
+                new String[]{String.valueOf(map_s2i.get("false")},
                 "factor --> false");
         productions[55] = new Production("loc",
-                new String[]{String.valueOf(map_s2i.get("id")), "loc'"},
-                "loc --> id loc'");
+                new String[]{String.valueOf(map_s2i.get("id")), String.valueOf(map_s2i.get("[")), "num", String.valueOf(map_s2i.get("]")), "loc'"},
+                "loc --> [num] loc'");
 
     }
 
